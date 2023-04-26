@@ -1,0 +1,262 @@
+/* Center the block elements */
+* {
+  margin:0;
+  /* 
+      margin:0 is used to remove the default margin of the body element
+
+      The margin property is used to set the margin of an element.
+      The margin property can have from one to four values:
+      1. margin-top
+      2. margin-right
+      3. margin-bottom
+      4. margin-left
+
+      The margin property can have one of the following values:
+      1. auto - The browser calculates the margin
+      2. length - Defines a margin in px, pt, cm, etc. Negative values are allowed
+      3. % - Defines a margin in % of the width of the containing block. Negative values are allowed
+      4. inherit - Inherits the margin value from the parent element
+  */
+  padding:0;
+  /* 
+      padding:0 is used to remove the default padding of the body element
+  */
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* NAVIGATION */
+nav {
+  background-color: #333;
+  overflow: hidden;
+  width: 100%;
+  height: 50px;
+}
+nav h1 {
+  float: left;
+  /* 
+      float: left is used to make the h1 float to the left
+
+      Float is used to make the element float to the left or right of the page
+      and the other elements will wrap around it.
+
+      The float property can have one of the following values:
+      1. left - The element floats to the left of its container
+      2. right - The element floats to the right of its container
+  */
+  margin-left: 20px;
+  padding: 10px;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 25px;
+}
+
+nav ul {
+  list-style-type: none;
+  float: right;
+  margin-right: 20px;
+  padding: 10px;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+  padding: 5px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+nav ul li a:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+main {
+  width: 100%;
+  margin: auto;
+  background-color: #f4f4f4;
+}
+/* MAIN SECTION */
+
+/* Banner with backround image */
+.banner {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/a3/Day_352_-_West_Midlands_Police_-_Puppies_%288281683820%29.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  /* 
+      position: relative is used to make the banner relative to the main section
+
+      The position property specifies the type of positioning method used for an element (static, relative, fixed, absolute or sticky).
+      The position property can have one of the following values:
+      1. static - Default. The element is positioned according to the normal flow of the document
+      2. relative - The element is positioned relative to its normal position
+      3. fixed - The element is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled
+      4. absolute - The element is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed)
+      5. sticky - The element is positioned based on the user's scroll position
+
+  */
+}
+
+.banner h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* 
+      translate(-50%, -50%) is used to center the text in the banner
+  */
+  color: #fff;
+  font-size: 50px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+/* [Display1] */
+.display1 {
+  width: 85%; /* 85% of the main section */
+  margin: 2em auto; /* 2em is equal to 32px to make the margin 32px */
+  overflow: auto;
+}
+
+.display1-header {
+  text-align: center;
+}
+
+.display1-pictures {
+  width: 48.5%; /* 48.5% because we have 2 pictures . 48.5% * 2 = 97% . 97% + 3% = 100% . 97% is the width of the pictures and 3% is the margin between the pictures */
+  float: left; /* float the pictures to the left */
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  position: relative; /* position the pictures relative to the display1 section. Relative to the display1 section because we want the pictures to be in the same line */
+  margin-bottom: 2em; /* 2em is equal to 32px to make the margin 32px */
+}
+
+.image1 {
+  margin-right: 3%; /* 3% is the margin between the pictures. Only the right picture has a margin because the left picture is floating to the left */
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/20/Aladdin_blue_eyed_puppy_dog.jpg');
+}
+
+.image2 {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d5/Alopekis_puppies.jpg');
+}
+
+.description {
+  position: absolute; /* position the description absolute to the pictures. Absolute to the pictures because we want the description to be in the same line as the pictures */
+  top: 60%; /* 60% from the top of the pictures */
+  left: 60%; /* 60% from the left of the pictures */
+  transform: translateY(-50%); /* translate the description 50% from the top of the pictures . -50% because we want the description to be in the middle of the pictures */
+  width: 40%;
+}
+
+.description h3 {
+  text-transform: uppercase;
+  font-size: 2em;
+  color: #fff;
+  line-height: 1.2em;
+  text-shadow: 3px 3px 6px #312a26;
+}
+
+/* [Display2] */
+.display2 {
+  width: 85%; /* 85% of the main section */
+  margin: 4em auto; /* 4em is equal to 64px to make the margin 64px */
+}
+
+.display2-pictures {
+  margin-top: 2em; /* 2em is equal to 32px to make the margin 32px */
+  overflow: auto; /* clear the floats */
+}
+
+.images {
+  width: 24%; /* 24% because we have 4 pictures . 24% * 4 = 96% . 96% + 4% = 100% . 96% is the width of the pictures and 4% is the margin between the pictures */
+  float: left; /* float the pictures to the left */
+  margin-right: 1%; /* 1% is the margin between the pictures. Only the right picture has a margin because the left picture is floating to the left */
+  margin-bottom: 1%; /* 1% is the margin between the pictures. Only the bottom picture has a margin because the top picture is floating to the top */
+}
+
+/* 
+  The :nth-child() CSS pseudo-class matches elements that are the nth child, 
+  of a particular type, of their parent. 
+  For example, p:nth-child(2) matches the second p element among a group of siblings.
+
+  The :nth-child() selector allows you to specify the element you want to style based on its position among a group of siblings.
+  The :nth-child() selector can take a number or a keyword as an argument.
+
+  In the example below, we are styling the 4th, 8th, 12th, 16th and 20th images to create a grid of 5 rows and 4 columns. Margin-right is set to 0 to remove the margin on the right side of the images. Because the images are floated, the images will wrap around the 4th, 8th, 12th, 16th and 20th images.
+*/
+
+
+.images:nth-child(4), 
+.images:nth-child(8) {
+  margin-right: 0; /* 
+  remove the margin on the right side of the images .
+  originally images appear in one column . Margin-right value zero makes the images appear in 4 columns .
+  
+  */
+}
+
+.images img {
+  width: 100%; /* make the width of the images 100% */
+  height: 350px; 
+  object-fit: cover; /* make the images cover the whole width and height of the images */
+  /* border top rounded */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+}
+
+
+/* FOOTER */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+.footer-items {
+  overflow: auto;
+  width: 85%;
+  margin: auto;
+}
+
+.column {
+  width: 50%;
+  float: left;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.column h3 {
+  color: #fff;
+  font-size: 1.5em;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.column ul {
+  list-style-type: none;
+}
+
+.column ul li {
+  margin-bottom: 5px;
+}
+
+
+
